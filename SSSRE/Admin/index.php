@@ -1,0 +1,16 @@
+ <?php  include ("../contenido/head.php"); ?>
+<body>
+    <div class="conteniner">
+        <?php  include ("../contenido/header.php");?>
+            <div class="barra_user">
+                <?php include("contenido/menu_adm.php"); ?>
+                <div class="user"> Portales Rodriguez Jesus Maed  | 
+                    <a href="../desconectar_usuario.php" title="Salir">
+                    <span class="icon-user-times"></span></a>
+                </div>
+            </div>
+        <aside id="Caja_Contenido_cen">
+            <?php  include(@$contenido); ?>
+        </aside> <!-- FIN contenido_tematico   -->
+            <?php include('../contenido/footer.html') ?>
+    </div> <!-- Fin de conteniner --> 

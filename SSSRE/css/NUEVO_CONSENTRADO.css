@@ -1,0 +1,51 @@
+
+form[name="new_consentrado"] label {
+    font-size: 10pt;
+    text-align: left;
+    float: left;
+    padding:15px auto;
+}
+form[name="new_consentrado"]{
+    width: 90%;
+    margin: 10px auto;
+    
+} 
+ 
+
+.caj_new_c{
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.3);  
+}
+
+label.txt_cj{
+    width: 96%;
+}
+
+.r1{
+display: inline-flex;
+    width: 25%;
+}
+
+
+.r1{  
+    flex-grow: 1;
+}
+
+
+
+@media screen and (max-width: 700px){
+    
+.r1{
+    width: auto;
+    display:block;
+}
+
+}
+
+
+
+
+

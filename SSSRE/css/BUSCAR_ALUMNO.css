@@ -1,0 +1,60 @@
+/*-------------------[css para sistema de busqueda ]-------------------*/
+form[name="bsq_alumno"] {
+	background-image: url("../res/bg_form.png");  
+	font-size: 10pt;
+	display: block;
+	padding: 13px;
+	margin-top: -36px;
+	border-radius: 10px  10px  0px  0px ;
+
+}
+form[name="bsq_alumno"] select,
+form[name="bsq_alumno"] input[type="text"],
+form[name="bsq_alumno"] input[type="submit"]{
+font-size: 8pt;
+}
+
+form[name="bsq_alumno"] select{
+	width:auto; 
+}
+
+form[name="bsq_alumno"] input[type="text"]{
+	width: 150px; 
+}
+form[name="bsq_alumno"] input[type="submit"]{
+	width: 60px; 
+	margin-top: 10px;
+} 
+/*-------------------[ fin s.b ]-------------------*/
+
+
+/*-------------------[ ]-------------------*/
+
+div.contenedor_alumnos{ 
+width: 99%;
+height: 84%;
+text-align: center;
+margin: 0px auto;
+overflow-y:auto; 
+}
+
+div table.lst_alumnos{
+	width: 100%;
+font-size: 9pt; 
+}
+ 
+
+/*-------------------[  ]-------------------*/
+
+button#edit{
+	padding: 8px;
+	width: auto;
+} 
+button#edit img{
+height: auto;
+width: 15px;
+} 
+
+button.reacom{
+	width: 40px;
+}

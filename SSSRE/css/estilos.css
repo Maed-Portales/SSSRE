@@ -1,0 +1,25 @@
+
+
+ @import url("BODY.css");
+ @import url("HEADER.css"); 
+ @import url("PERIDO_ESCOLAR.css");
+ @import url("LOGIN.css");
+ @import url("SERVICIOS.css");
+ @import url("TRANCICION.css");
+ @import url("FORMULARIOS.css"); 
+ @import url("CATEGORIAS.css"); 
+ @import url("ALUMNADO.css");
+ @import url("BUSCAR_ALUMNO.css"); 
+ @import url("BARRA_USER.css"); 
+ @import url("fontello.css");  
+ @import url("MENU.css");    
+ @import url("NUEVO_CONSENTRADO.css");  
+ @import url("TOOLS_ADMIN.css");
+ 
+
+ * { 
+	margin: 0px; 
+	padding: 0px; 
+	text-align:center;
+}
+

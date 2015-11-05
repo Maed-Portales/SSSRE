@@ -1,0 +1,30 @@
+.List_alumnado{
+margin-top: 35px;  
+background: #fff;
+height: 400px;
+} 
+
+
+table.lst_alumnos th{
+    background: #000;
+    color:#fff;
+ }
+table.lst_alumnos tr:nth-child(odd){
+    background: #dedede; 
+}
+ 
+.contenedor_alumnos{
+  padding-top: 10px;
+    
+}
+.txt_noms{
+    text-align: left;
+    padding-left: 15px;
+}
+
+@media (max-width:768px) {
+    .List_alumnado{
+    height: 500px;
+        
+    }  
+}

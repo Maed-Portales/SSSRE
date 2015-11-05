@@ -1,0 +1,25 @@
+
+div.peridos { 
+	height: 99%;  
+	margin: 0px auto;
+	margin-top:-35px; 
+	overflow-y:auto; 
+	width:98%;
+	border-radius: 10px;
+}
+
+table[name="contenido_fls"] { margin: 0px auto; width: 50%;}
+table[name="contenido_fls"] th { background: #dedede; }
+ .gabeta{
+	width: 37px;
+	height: auto;
+	margin-top: 10px;
+}
+
+.folder{
+	width: 25px;
+	height: auto;
+	margin-top: 5px;
+
+}
+.p_text{ text-align: left;}

@@ -1,0 +1,65 @@
+table[name="categorias"]{
+	width: 90%;
+	margin: 0px auto;
+	text-align: center; 
+    padding-top: 40px;
+    padding-bottom: 40px;
+} 
+
+table[name="categorias"] td{
+	background:#950006;
+	border-radius: 10px;
+	color:#fff;
+	font-size: 9pt;
+
+}
+ 
+table[name="categorias"] td:hover{
+	background:#2e6f1d;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+
+
+table[name="categorias"] tr td a:link {
+ text-decoration:none;
+ color:#fff;
+}
+
+
+table[name="categorias"] tr td a:visited {
+ text-decoration:none;
+ color:#fff;
+}
+
+table[name="categorias"] tr td a:active{
+ text-decoration:none;
+ color:#fff;
+}
+table[name="categorias"] tr td a:hover{
+ text-decoration:none;
+ color:#fff;
+}
+
+ 
+#img_dts_per,#img_up_doc{
+	width:45px;
+	height:auto; 
+} 
+#img_dbr, #img_avatar{
+	width:55px;
+	height:auto; 
+} 
+
+table[name="categorias"] td label{
+
+	display: inline-block;
+	width: 60%;
+} 
+
+ .cuadro{
+border-radius: 10px;
+cursor: pointer;
+padding:22% 0;
+ }

@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------------*/
+.barra_user{
+    width: 100%;
+    padding: 1px auto;
+    background: #d0d0d0;
+    color:#000;
+    display:flex;
+    font-size: 9pt;
+    align-items: center;
+}
+.barra_user .user{
+    cursor:default;
+}
+.user {
+	font-weight: bolder; 
+    width:23%;
+    padding: 10px;
+}
+.icon-user-times{color:#0040FF;}
+.icon-user-times:hover{
+    color:red;
+    font-size: 12pt;
+}
+@media (max-width:768px) {
+     
+    .user {
+        width:80%;
+    }
+}

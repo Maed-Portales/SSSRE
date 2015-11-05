@@ -1,0 +1,60 @@
+ body {
+background:url("../res/bg-tecmate.png") repeat;  
+background-color: #f4f4f4;
+font-family:"Time New Roman";
+font-style: 12pt;
+}
+
+div.conteniner{ 
+	height:auto;
+	margin: 10px  auto;
+	width:95%;
+    background:rgba(0,0,0,0); 
+	 }   
+
+aside#Caja_Contenido_cen{
+	background:rgba(0,0,0,0.5); 
+    border: 10px solid #950006; 
+	margin: 0px auto;
+	height: auto; 
+    z-index: 2;
+}
+ 
+
+article select, option{
+	width: 100%;
+	text-align:left; 
+	border-radius: 8px;
+}
+
+ 
+ .con_prog{
+
+		background: #EEE;
+		margin: 0% auto;
+		overflow-y:auto; 
+		position: relative;
+		width: 85%;
+		height: 50%;
+}
+.coprog { width: 95%; height: 80%; }
+
+.txt_p{ text-align: left; }
+
+
+footer{
+    background: #950006;  
+    margin: 0px auto;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    height: 20px;
+    font-size: 8pt; 
+}
+
+
+footer p.right{
+text-align: center; 
+ color:rgba(255,255,255,0.7);
+    text-shadow:5px 5px 10px #000;;
+} 
