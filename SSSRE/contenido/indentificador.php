@@ -1,9 +1,9 @@
-<?php
+ <?php  include ("../contenido/head.php");  
 
  
  if($ERROR)
  { echo "<!DOCTYPE html>
-<html lang='es'>
+<html lang='es-MX'>
 <head> 
 <title>Acceso Usuarios</title> 
 	<meta Content-Type:'text/html' charser='utf-8' />
@@ -17,8 +17,7 @@
 </body>
 </html>
 "; }
-
-include_once("conector.php"); 
+ 
 
 $u = $_POST['user'];
 $u = strtoupper($u);
@@ -29,24 +28,23 @@ $p = $_POST['password'];
 //Inicio de variables de sesión
 if (!isset($_SESSION)) { session_start(); }
 
-//Consultar si los datos son están guardados en la base de datos
-$consulta= "SELECT*FROM usuario WHERE usuario='".$u."' AND PASSWORD='".$p."'";  
+$consulta="SELECT*FROM usuario WHERE usuario='".$u."' AND PASSWORD='".$p."'";  
 
-$Query1 = $conexion->query($consulta) or die ("");
+$Query1=$conexion->query($consulta) or die ("");
 
  
 
 while ($i = $Query1 -> fetch_assoc()) 
 {
-   $idUser=['id_usuario'];
+   $idUser=$i['id_usuario'];
    $tipo=$i['tipo'];
 }
 
 	if (!$idUser || isset($Query1)==null) 
 	{
-		echo '<script language = javascript>
-		alert("Usuario o Password incorresctos, por favor verifique.")
-		self.location = "index.php"</script>';
+        $mensaje='error';
+     
+        header ("Location: index.php?mensaje=".urlencode($mensaje));
 	}
 	else 
 	{       
