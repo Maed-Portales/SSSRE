@@ -2,8 +2,10 @@
 $ERROR=error_reporting(E_ALL ^ E_NOTICE); 
 date_default_timezone_set('America/Monterrey');
 @$año = date("Y"); 
+ 
 include("conector.php");    
-include "opciones.php"; 
+include "opciones.php";   
+include "msj_data.php"; 
 
 
         $fichero = "css/estilos.css";

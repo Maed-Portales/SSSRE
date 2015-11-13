@@ -4,7 +4,7 @@
         <?php include ("../contenido/header.php");?>
                 <div class="barra_user">
                 <?php include("contenido/menu_alum.php"); ?>
-                    <div class="user"> Portales Rodriguez Jesus Maed  | <a href="../desconectar_usuario.php" title="Salir">
+                    <div class="user"> Portales Rodriguez Jesus Maed  | <a href="../contenido/desconectar_usuario.php" title="Salir">
                         <span class="icon-user-times"></span></a>
                     </div>
                 </div>
