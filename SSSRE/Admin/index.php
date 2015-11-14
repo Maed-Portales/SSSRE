@@ -1,7 +1,10 @@
 
 <?php   
 include ("../contenido/session.php");
-include ("../contenido/head.php"); ?>
+include ("../contenido/head.php");
+
+    if ($tipo == "1") { header ("Location: ../Alumno");  } 
+?>
 <body>
     <div class="conteniner">
         <?php  include ("../contenido/header.php");?>

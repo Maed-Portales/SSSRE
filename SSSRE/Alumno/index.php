@@ -1,7 +1,11 @@
 
 <?php  
 include ("../contenido/session.php");
-include ("../contenido/head.php");?>
+include ("../contenido/head.php");
+
+    if ($tipo == "0") { header ("Location: ../Admin");  } 
+?>
+
 <body>
     <div class="conteniner">
         <?php include ("../contenido/header.php");?>
