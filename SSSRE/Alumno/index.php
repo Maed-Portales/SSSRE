@@ -1,4 +1,7 @@
-<?php  include ("../contenido/head.php");?>
+
+<?php  
+include ("../contenido/session.php");
+include ("../contenido/head.php");?>
 <body>
     <div class="conteniner">
         <?php include ("../contenido/header.php");?>

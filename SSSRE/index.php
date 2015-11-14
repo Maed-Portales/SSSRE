@@ -8,7 +8,7 @@
             </aside> <!-- FIN contenido_tematico   -->
         <?php include('contenido/footer.html') ?>
     </div> <!-- Fin de conteniner --> 
-
-
+    </body> 
+</html>
 
  
