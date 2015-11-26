@@ -4,6 +4,7 @@
 $ERROR=error_reporting(E_ALL ^ E_NOTICE); 
 date_default_timezone_set('America/Monterrey');
 @$año = date("Y"); 
+session_start();
  
 include("conector.php");    
 include "opciones.php";   
@@ -27,9 +28,8 @@ include "msj_data.php";
 ?>
 
 
-
-<!DOCTYPE html>
-<html lang="es-MX">
+<!DOCTYPE html><!-- HTML5 -->
+<html lang="es-ES" dir="ltr">
 <head>
 	<title>S.S.R.E | <?php echo @$titulo; ?> </title>
 	
@@ -44,6 +44,8 @@ include "msj_data.php";
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     
     <script> $(function() { $( "#tabs" ).tabs(); }); </script>    
-   
+    <script>
+    if(history.forward(1)){location.replace(history.forward(1))}
+    </script>
 </head>
     

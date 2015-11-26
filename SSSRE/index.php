@@ -1,4 +1,11 @@
-<?php include ('contenido/head.php'); ?>
+<?php include ('contenido/head.php'); 
+ 
+  $tipo = $_SESSION['tipo'];
+ 
+ if (isset($tipo)==true) {
+    if ($tipo==1){header ("Location:Alumno");} 
+	else if ($tipo==0){header ("Location:Admin"); }
+}?>
 <body><?php echo $msjs_data; ?>
     <div class='conteniner'>
         <?php  include ('contenido/header.php'); ?>
