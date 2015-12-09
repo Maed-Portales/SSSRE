@@ -1,4 +1,18 @@
 /*------------------------------------------Formularios-----------------------------*/ 
+/* Estilo por defecto */
+ 
+input:required:invalid {
+ 
+border: 1px solid red;
+ 
+}
+ 
+input:required:valid {
+ 
+border: 1px solid green;
+ 
+}
+
 fieldset[name='alta_equpo']{ margin-top:-15px;  } 
 
 fieldset{
@@ -24,6 +38,7 @@ legend {
   input[type='number'],
   input[type='date'],
   input[type='time'],
+  input[type='email'], 
   TEXTAREA[name='msj'],
   button {
  	 background: #c3c3c3;
@@ -38,6 +53,7 @@ legend {
 select, TEXTAREA[name='msj'], input.InfoPc {width:94% }
  
 input[type='text']:focus,
+input[type='email']:focus,
 input[type='password']:focus, 
 select:focus{ background: #fff; text-align: left; }
 

@@ -17,5 +17,5 @@
 		}
 		return $clv;
 	}
-	$Sdcl = generador(4,0,1,1,0);
+	$Sdcl = generador(6,0,1,1,0);
 ?>

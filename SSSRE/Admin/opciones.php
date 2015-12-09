@@ -16,6 +16,12 @@ switch (@$archivo) {
 		break;
 
 
+	case '5': 
+		@$titulo = "Configuración";
+		@$contenido = "contenido/Configuracion.php";
+		break;
+
+
 	default:
 		@$titulo = "Alumno";
         @$contenido = "contenido/categorias.php";

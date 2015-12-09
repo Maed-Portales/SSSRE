@@ -10,7 +10,7 @@ include ("../contenido/head.php");
         <?php  include ("../contenido/header.php");?>
             <div class="barra_user">
                 <?php include("contenido/menu_adm.php"); ?>
-                <div class="user"> Portales Rodriguez Jesus Maed  | 
+                <div class="user">Xiomara Arely Flores Leal | 
                     <a href="../contenido/desconectar_usuario.php" title="Salir">
                     <span class="icon-user-times"></span></a>
                 </div>

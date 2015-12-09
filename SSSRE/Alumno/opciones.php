@@ -4,7 +4,7 @@ if (isset($_GET["opcion"] ))
  @$archivo = $_GET["opcion"]; 
 switch (@$archivo) {
 
-    case '1':
+    case '6':
 		@$titulo = "Datos Personales";
         @$contenido = "contenido/datos_personales.php";
 		break; 
