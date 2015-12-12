@@ -1,7 +1,9 @@
 <div id="tabs">
   <ul>
-    <li><a href="#tabs-1">Datos Personales</a></li>
-    <li><a href="#tabs-2">Otros Datos</a></li>  
+    <li><a href="#tabs-1">Datos Generales</a></li>
+    <li><a href="#tabs-2">Vivienda</a></li>  
+    <li><a href="#tabs-3">Contactar</a></li>  
+    <li><a href="#tabs-4">Seguridad</a></li>  
   </ul>
     
     <div id="tabs-1">
@@ -24,13 +26,20 @@
                         <label> Sexo: </label>
                         <select>
                             <option value="">-</option>
-                            <option value="">Femenino</option>
-                            <option value="">Masculino</option>
+                            <option value="1">Ingeniería Industrial</option>
+                            <option value="2">Ingeniería en Innovación Agrícola Sustentable</option>
+                            <option value="3">Ingeniería en Sistemas Computacionales</option>
+                            <option value="4">Ingeniería en Gestion Empresarial</option>
                         </select>
                     </div>
                     <div class="datos_form_pers">
                         <label> Carrera: </label>
-                        <input type="text">
+                        <select>
+                            <option value="">-</option>
+                            <option value="">Femenino</option>
+                            <option value="">Masculino</option>
+                        </select>
+                        
                     </div>
                     <div class="datos_form_pers">
                         <label> Semestre: </label>
@@ -47,7 +56,7 @@
   
   <div id="tabs-2">
     <fieldset>
-        <legend>Vivienda | Contactar | Redes Sociales</legend>
+        <legend>Vivienda</legend>
             <form name="dts_pers" action="" method="post"> 
                
                <input type="hidden" name="otrosD" value="id_usurio" /> 
@@ -92,22 +101,39 @@
                     <input type="text">
                 </div>
 
-
-                <div class="datos_form_pers">
-                    <label>Telefono: </label>
-                    <input type="text">
+                <div class="datos_form_pers"> 
+                    <input type="submit" name="otrosD" value="Enviar Datos" />
                 </div>
-
-                <div class="datos_form_pers">
-                    <label>Célular: </label>
-                    <input type="text">
-                </div>
+            </form>
+    </fieldset> 
+  </div>
+  
+  
+  
+  <div id="tabs-3">
+    <fieldset>
+        <legend>Contactar</legend>
+            <form name="dts_pers" action="" method="post"> 
+               
+               <input type="hidden" name="otrosD" value="id_usurio" /> 
+               
+                
 
                 <div class="datos_form_pers">
                     <label>Correo: </label>
                     <input type="text">
                 </div>
 
+
+                <div class="datos_form_pers">
+                    <label>Telefono: </label>
+                    <input type="text">
+                </div>
+                   
+                   <div class="datos_form_pers">
+                    <label>Célular: </label>
+                    <input type="text">
+                </div>
 
                 <div class="datos_form_pers">
                     <label>Facebook: </label>
@@ -119,12 +145,48 @@
                     <input type="text">
                 </div> 
 
+                <div class="datos_form_pers">
+                    <label>Google+: </label>
+                    <input type="text">
+                </div> 
+
                 <div class="datos_form_pers"> 
                     <input type="submit" name="otrosD" value="Enviar Datos" />
                 </div>
             </form>
     </fieldset> 
   </div>
+  
+  
+  
+  <div id="tabs-4">
+    <fieldset>
+        <legend>Seguridad</legend>
+            <form name="dts_pers" action="" method="post"> 
+               
+               <input type="hidden" name="otrosD" value="id_usurio" />  
+
+                <div class="datos_form_pers">
+                    <label>Nuevo Password: </label>
+                    <input type="text">
+                </div> 
+                
+            
+
+                <div class="datos_form_pers"> 
+                    <input type="submit" name="otrosD" value="Enviar Datos" />
+                </div>
+            </form>
+    </fieldset> 
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
   
 </div>
     

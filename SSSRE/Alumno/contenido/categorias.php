@@ -1,10 +1,10 @@
 <table class="cat_alum" name="categorias" border="0">
 	<tr>
 		<td width="33%"> 
-			<a href="?opcion=1"> 
+			<a href="?opcion=6"> 
 				<div class="cuadro"> 
 					<img id="img_dts_per" src="../res/dts_per.ico"> <br>
-                    <label>Actualizar Datos Personales</label> 
+                    <label>Configuración</label> 
 				</div>	
 			</a>
 		</td>

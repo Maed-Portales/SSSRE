@@ -50,7 +50,8 @@ $_DATOS_EXCEL[$i]['Creditos Acumulados']=$objPHPExcel->getActiveSheet()->getCell
         
             foreach ($valor as $campo2 => $valor2)
             {
-                $campo2 == "Creditos Acumulados" ? $sql.= $valor2."'); " : $sql.= $valor2."','";
+                $campo2 == "Creditos Acumulados" ?
+				$sql.= $valor2."'); " : $sql.= $valor2."','";
             }
 
         $result = mysqli_query($conexion, $sql);

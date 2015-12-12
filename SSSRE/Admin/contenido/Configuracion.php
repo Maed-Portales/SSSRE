@@ -1,7 +1,8 @@
 <div id="tabs">
   <ul>
-    <li><a href="#tabs-1">General</a></li>
-    <li><a href="#tabs-2">Seguridad</a></li>  
+    <li><a href="#tabs-1">Datos Generales</a></li>
+    <li><a href="#tabs-2">Medios de Contacto</a></li>  
+    <li><a href="#tabs-3">Seguridad</a></li>  
   </ul>
     
     <div id="tabs-1">
@@ -49,7 +50,7 @@
   
   <div id="tabs-2">
     <fieldset>
-        <legend>Seguridad</legend>
+        <legend>Medios de Contacto</legend>
             <form name="dts_pers" action="" method="post"> 
                
                <input type="hidden" name="otrosD" value="id_usurio" /> 
@@ -58,11 +59,7 @@
                     <label> Correo Electronico: </label>
                     <input type="email" name="email" required/>
                 </div>
-
-                <div class="datos_form_pers">
-                    <label for='pass'>Contraseña: </label>
-                    <input id="pass" type="password"  maxlength='6'name="password" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"/></div> 
-
+                
                 <div class="datos_form_pers">
                     <label>Telefono: </label>
                     <input name='tel' type="text">
@@ -81,12 +78,38 @@
                 <div class="datos_form_pers">
                     <label>Twitter: </label>
                     <input name='Twitter' type="text">
+                </div>
+                
+                <div class="datos_form_pers">
+                    <label>Google+: </label>
+                    <input name='Twitter' type="text">
                 </div> 
 
                 <div class="datos_form_pers"> 
                     <input type="submit" name="otrosD" value="Enviar Datos" />
                 </div>
             </form>
+    </fieldset> 
+  </div>
+  
+  
+  <div id="tabs-3">
+    <fieldset>
+        <legend>Seguridad</legend>
+            <form name="dts_pers" action="" method="post"> 
+               
+               <input type="hidden" name="otrosD" value="id_usurio" /> 
+
+                <div class="datos_form_pers">
+                    <label for='pass'>Nuevo Password: </label>
+                    <input id="pass" type="password"  maxlength='6'name="password" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"/></div> 
+
+                <div class="datos_form_pers"> 
+                    <input type="submit" name="otrosD" value="Enviar Datos" />
+                </div>
+
+
+        </form>
     </fieldset> 
   </div>
   
