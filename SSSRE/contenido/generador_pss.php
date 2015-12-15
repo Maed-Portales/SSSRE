@@ -1,87 +1,63 @@
 <?php  
 	function generador($longitud,$letras_min,$letras_may,$numeros,$simbolos)
 	{ 
-		$variacteres  = $letras_min?'abdefghijklmnopqrstuvwxyz':''; 
-		$variacteres .= $letras_may?'ABDCEFGHIJKLMNOPQRSTUVWXYZ':'';
-		$variacteres .= $numeros?'0123456789':'';    
-		$variacteres .= $simbolos?'!#$%&/()?¡¿':'';
+		$cadena_clv  = $letras_min?'abdefghijklmnopqrstuvwxyz':''; 
+		$cadena_clv .= $letras_may?'ABDCEFGHIJKLMNOPQRSTUVWXYZ':'';
+		$cadena_clv .= $numeros?'0123456789':'';    
+		$cadena_clv .= $simbolos?'!#$%&/()?¡¿':'';
 		
 		$i=0;
 		$clv='';
 
 		while($i<$longitud)
 		{
-			$numrad = rand(0,strlen($variacteres)-1);
-			$clv .= substr($variacteres,$numrad,1);
+			$numrad = rand(0,strlen($cadena_clv)-1);
+			$clv .= substr($cadena_clv,$numrad,1);
 			$i++;
 		}
 		return $clv;
 	}
 	
 
+include("../contenido/conector.php");
+
+$query_ext_matricula = "SELECT * FROM alumnos";
+$run_matricula=$conexion ->query($query_ext_matricula); 
 
 
-    include("../contenido/conector.php");
+$query_ext_Id_Estudiante = "SELECT IdEstudiante FROM login";
+$run_Id_Estudiante=$conexion->query($query_ext_Id_Estudiante); 
 
+while($row = $run_Id_Estudiante ->fetch_assoc()) { 
 
-/*
-
-
-SELECT matricula, COUNT(*) FROM alumnos
-SELECT matricula FROM alumnos ; 
-    
- INSERT INTO login ('idLogin','usuario','password','tipo')
-	VALUES
-	('', 
-	'matricula', 
-	'password', 
-	'1'
-*/
-
-$query_ext_matricula = "SELECT matricula FROM alumnos";
-$run_matricula = $conexion ->query($query_ext_matricula); 
-                     
-$campo2=0;
+    $IdEstudiante=$row["IdEstudiante"]; 
+}
+$count=0;
 $errores=0;
- while(@$row = $run_matricula ->fetch_assoc()) { 
 
-    $matricula =  $row["matricula"]; 
-    $Sdcl = generador(6,0,1,1,0);
+while($row = $run_matricula ->fetch_assoc()) { 
 
-    /* 
- 
- $incertar_E = "INSERT INTO login values (' ";
+    $IdEst =  $row["IdEstudiante"]; 
+    $Sdcl = generador(6,1,1,1,0);
 
-     
-$DATOS[1]='';
-$DATOS[2]=$matricula;
-$DATOS[3]=$Sdcl;
-$DATOS[4]='1';   
-    
+    if($IdEst == $IdEstudiante ) {echo "Todos los alumnos ya cuentan con una clave."; }else{
+$incertar_E = "INSERT INTO login values ( '$IdEst','0', '$Sdcl','1')";
+$result = mysqli_query($conexion, $incertar_E); 
+    }
 
-     
- foreach ($DATOS as $campo2 => $valor2)
-  {
+ if (!$result){  $errores+=1;}
 
-    $valor2 =="1" ?
-    $incertar_E .= $valor2."'); " : $incertar_E .= $valor2."','";
- } */
-    $incertar_E = "INSERT INTO login values ( '','$matricula', '$Sdcl','1')";
- 
-   $result = mysqli_query($conexion, $incertar_E); 
-  
-
- if (!$result){ /*echo "Error al insertar registro ".$campo;*/ $errores+=1;}
-
-     $campo2+=1;
+     $count+=1;
  }
+
 
 echo "
     <strong>
         <center>
-            ARCHIVO IMPORTADO CON EXITO, EN TOTAL". $campo2 ."REGISTROS Y ". $errores ." ERRORES
+            ARCHIVO IMPORTADO CON EXITO, EN TOTAL ".$count." REGISTROS Y ". $errores ." ERRORES
         </center>
     </strong>"; 
-    $conexion->close();
+
+$conexion->close();
   
 ?>
