@@ -1,11 +1,27 @@
 <?php
 
+	function generador($longitud,$letras_min,$letras_may,$numeros,$simbolos)
+	{ 
+		$cadena_clv  = $letras_min?'abdefghijklmnopqrstuvwxyz':''; 
+		$cadena_clv .= $letras_may?'ABDCEFGHIJKLMNOPQRSTUVWXYZ':'';
+		$cadena_clv .= $numeros?'0123456789':'';    
+		$cadena_clv .= $simbolos?'!#$%&/()?¡¿':'';
+		
+		$i=0;
+		$clv='';
+
+		while($i<$longitud)
+		{
+			$numrad = rand(0,strlen($cadena_clv)-1);
+			$clv .= substr($cadena_clv,$numrad,1);
+			$i++;
+		}
+		return $clv;
+	}
+	 
+
 if(isset($_POST["action"]))
-{ /*
-    $ia=$_POST["cant"];
-   $yaar=$_POST['year'];
-   $peridod=$_POST['periodo']; */
-    
+{  
     $archivo = $_FILES['excel']['name'];
     $tipo = $_FILES['excel']['type'];
     $destino = "bak_".$archivo;
@@ -27,35 +43,60 @@ if(isset($_POST["action"]))
                 $highestRow = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
 
 for ($i=2;$i<=$highestRow; $i++)
-                    {
-//$_DATOS_EXCEL[$i]['year']=$_POST['year'];
-//_DATOS_EXCEL[$i]['periodo']=$_POST['periodo'];
+                    { /*
+					
 $_DATOS_EXCEL[$i]['IdEstudiante']=$objPHPExcel->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
 $_DATOS_EXCEL[$i]['Matricula']=$objPHPExcel->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
 $_DATOS_EXCEL[$i]['Nombre']=$objPHPExcel->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
 $_DATOS_EXCEL[$i]['Carrera']=$objPHPExcel->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
 $_DATOS_EXCEL[$i]['Total de Creditos de la Carrera']=$objPHPExcel->getActiveSheet()->getCell('E'.$i)->getCalculatedValue();
 $_DATOS_EXCEL[$i]['Creditos Acumulados']=$objPHPExcel->getActiveSheet()->getCell('F'.$i)->getCalculatedValue(); 
-                    }
+                    */
+					
+$_DATOS_EXCEL[$i]['IdEstudiante']=$objPHPExcel->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
+$_DATOS_EXCEL[$i]['Matricula']=$objPHPExcel->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
+$_DATOS_EXCEL[$i]['Nombre']=$objPHPExcel->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
+$_DATOS_EXCEL[$i]['Carrera']=$objPHPExcel->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
+$_DATOS_EXCEL[$i]['Total de Creditos de la Carrera']=$objPHPExcel->getActiveSheet()->getCell('E'.$i)->getCalculatedValue();
+$_DATOS_EXCEL[$i]['Creditos Acumulados']=$objPHPExcel->getActiveSheet()->getCell('F'.$i)->getCalculatedValue(); 
+					
+					
+					}
 
                 } else { /*echo "Necesitas primero importar el archivo"; */}
 
 
     $errores=0;
- 
+ set_time_limit($segundos); 
     
     foreach($_DATOS_EXCEL as $campo => $valor)
     { 
-        $sql = "INSERT INTO alumnos VALUES ('";
+	
+$ID = $valor['IdEstudiante'];
+$MAT = $valor['Matricula'];
+
+$TCC= $valor['Total de Creditos de la Carrera'];
+$CA = $valor['Creditos Acumulados'];
+ 
+     $Sdcl = generador(6,1,1,1,0);
+
+
+	/*
+        $sql = "INSERT INTO estudiante VALUES ('";
         
             foreach ($valor as $campo2 => $valor2)
             {
                 $campo2 == "Creditos Acumulados" ?
 				$sql.= $valor2."'); " : $sql.= $valor2."','";
             }
-
-        $result = mysqli_query($conexion, $sql);
-
+        $result = mysqli_query($conexion, $sql); */
+		
+		$sqlA = "INSERT INTO estudiante VALUES	($ID,$TCC,$CA ,'0')";
+		$sqlB = "INSERT INTO persona VALUES	($ID,'' ,'' ,'' ,'' ,'', '$MAT','$Sdcl' ,'1' )";
+		
+	        mysqli_query($conexion, $sqlB);
+  $result = mysqli_query($conexion, $sqlA);
+		
         if (!$result){ /*echo "Error al insertar registro ".$campo;*/ $errores+=1;}
     }
 echo "

@@ -8,7 +8,7 @@ $mensaje=$_GET['mensaje'];
 		 $msjs_data = "
                 <div id='error' class='modalmask'>    
                     <div class='modalbox rotate'>
-                        <a href='../SSSRE/' title='Close' class='close'>x</a> 
+                        <a href='../../' title='Close' class='close'>x</a> 
                         <div class='txt'> </div><span class='flecha'></span> 
                     </div>   
                 </div>
@@ -16,7 +16,7 @@ $mensaje=$_GET['mensaje'];
 		break;
      	case '2': 
                 $msjs_data = "
-                <meta http-equiv='Refresh' content='5;url=../SSSRE/index.php'>
+                <meta http-equiv='Refresh' content='5;url=../../index.php'>
 
                 <div id='msj1' class='modalmask'>    
                     <div class='modalbox rotate msj'> 

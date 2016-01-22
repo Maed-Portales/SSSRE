@@ -1,17 +1,20 @@
-
 <?php  
 include ("../contenido/session.php");
 include ("../contenido/head.php");
 
-    if ($tipo == "0") { header ("Location: ../Admin");  } 
+if ($tipo == "0") { header ("Location: ../Admin");  } 
 ?>
 
-<body>
+<body>        
+<?php include ("../contenido/header.php");?>
     <div class="conteniner">
-        <?php include ("../contenido/header.php");?>
+<div class="txt_hdr">
+		Seguimiento de Servicio Social, Residencias y Egresados
+		</div>
                 <div class="barra_user">
                 <?php include("contenido/menu_alum.php"); ?>
-                    <div class="user"> Portales Rodriguez Jesus Maed  | <a href="../contenido/desconectar_usuario.php" title="Salir">
+                    <div class="user"> 
+                    <?php echo $usuario; ?> | <a href="../contenido/desconectar_usuario.php" title="Salir">
                         <span class="icon-user-times"></span></a>
                     </div>
                 </div>

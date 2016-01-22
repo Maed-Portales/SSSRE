@@ -4,7 +4,7 @@ session_start();
 
 include ("contenido/head.php");
 
-if ($_SESSION['id_usuario'])
+if ($_SESSION['ID'])
 {	
     $_SESSION = array();
 

@@ -11,8 +11,8 @@
                 <form name="dts_pers" action="" method="post"> 
                     <input type="hidden" name="otrosD" value="id_usurio" /> 
                     <div class="datos_form_pers">
-                        <label for='user'>Num Empleado: </label>
-                        <input id="user" type="text"  maxlength='3' name="user" pattern="[0-9]*" autofocus required placeholder="000" title='solo con números del 0 al 9'/>
+                        <label for='user'>Matricula: </label>
+                        <input id="user" type="text"  maxlength='3' name="user" pattern="^@?(\w){1,15}$" autofocus required placeholder="000" title='solo con números del 0 al 9'/>
                     </div>
                     <div class="datos_form_pers">
                         <label>Carrera Profesional: </label>
@@ -66,8 +66,14 @@
                 </div>
 
                 <div class="datos_form_pers">
-                    <label>Célular: </label>
+                    <label>Célular 1: </label>
                     <input name='cel' type="text">
+                </div>  
+                
+
+                <div class="datos_form_pers">
+                    <label>Célular 1: </label>
+                    <input name='ce2' type="text">
                 </div>  
                 
                 <div class="datos_form_pers">

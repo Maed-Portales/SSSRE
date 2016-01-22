@@ -32,7 +32,7 @@ form[name="bsq_alumno"] input[type="submit"]{
 
 div.contenedor_alumnos{ 
 width: 99%;
-height: 84%;
+height: 475px;
 text-align: center;
 margin: 0px auto;
 overflow-y:auto; 

@@ -1,3 +1,7 @@
+<?php
+include("ing_dat_alum.php");
+
+?>
 <div id="tabs">
   <ul>
     <li><a href="#tabs-1">Datos Generales</a></li>
@@ -12,41 +16,55 @@
                 <form name="dts_pers" action="" method="post"> 
                     <div class="datos_form_pers">
                         <label> Matricula: </label>
-                        <input type="text">
+                        <input type="text" name="matricula" value="<?php echo $_SESSION['u'][4]; ?>"   readonly="readonly" title="La matricula no se puede modificar" >
                     </div>
                     <div class="datos_form_pers">
-                        <label> Nombres: </label>
-                        <input type="text">
+                        <label for='N1'>Primer nombre (<span class="required">*</span>): </label>
+                        <input type="text" name='N1' value="<?php echo $_SESSION['u'][0]; ?>" pattern="[a-z]*[A-Z]*" title='Favor de solo ingresar de [a-z] en mayúsculas y minúsculas.'/>
                     </div>
                     <div class="datos_form_pers">
-                        <label> Apellidos: </label>
-                        <input type="text">
+                        <label for='N2'>Segundo Nombre (<span class="required">*</span>): </label>
+                        <input type="text" name='N2' value="<?php echo $_SESSION['u'][1]; ?>" />
+                    </div>
+                    <div class="datos_form_pers">
+                        <label for='Ap1'> Apellido paterno (<span class="required">*</span>): </label>
+                        <input type="text" name='Ap1' value="<?php echo $_SESSION['u'][2]; ?>"   >
                     </div> 
                     <div class="datos_form_pers">
-                        <label> Sexo: </label>
-                        <select>
-                            <option value="">-</option>
-                            <option value="1">Ingeniería Industrial</option>
-                            <option value="2">Ingeniería en Innovación Agrícola Sustentable</option>
-                            <option value="3">Ingeniería en Sistemas Computacionales</option>
-                            <option value="4">Ingeniería en Gestion Empresarial</option>
+                        <label for='Ap2'> Apellido materno (<span class="required">*</span>): </label>
+                        <input type="text" name='Ap2' value="<?php echo $_SESSION['u'][3]; ?>"   >
+                    </div> 
+                    <div class="datos_form_pers">
+                        <label> Sexo (<span class="required">*</span>): </label>                       
+                            <select name='Sexo'>
+                                <option value="">-</option><?php
+								foreach($genero_sexual as $i =>$d){	echo "
+								 <option value='".$d."'"; if($d==$_SESSION['u'][5]) { echo ' selected '; }echo "> $d"; } 
+								?> 
                         </select>
                     </div>
                     <div class="datos_form_pers">
-                        <label> Carrera: </label>
-                        <select>
-                            <option value="">-</option>
-                            <option value="">Femenino</option>
-                            <option value="">Masculino</option>
-                        </select>
+                        <label> Carrera (<span class="required">*</span>): </label>
+                          
+						  <select name='Car'>
+                             <option value="">-</option>
+							 <?php  
+							 $Q_C =" SELECT idCarrera,AcronimoC,NomCarrera FROM carrera"; 
+							 $r_C = $conexion->query($Q_C);
+							 while ($row = $r_C -> fetch_assoc()) { 
+							 @$c1 =  $row['idCarrera'];  
+							 @$c2 = utf8_encode( $row['AcronimoC']); echo "
+							<option value='".$c1."'"; if($c1 == $carrera ) { echo ' selected '; }echo "> $c2";  }
+							 ?>
+                           </select> 
                         
                     </div>
                     <div class="datos_form_pers">
-                        <label> Semestre: </label>
+                        <label> Semestre (<span class="required">*</span>): </label>
                         <input type="text">
                     </div>
                     <div class="datos_form_pers"> 
-                        <input type="submit" name="otrosD" value="Enviar Datos" />
+                        <input type="submit" name="DatP" value="Ingresar Datos" />
                     </div>
                 </form>
         </fieldset> 
@@ -131,7 +149,12 @@
                 </div>
                    
                    <div class="datos_form_pers">
-                    <label>Célular: </label>
+                    <label>Célular 1: </label>
+                    <input type="text">
+                </div>
+                   
+                   <div class="datos_form_pers">
+                    <label>Célular 2: </label>
                     <input type="text">
                 </div>
 

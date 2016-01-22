@@ -82,8 +82,15 @@
 .movedown {
     margin:100px auto 0px auto;
 }
-.rotate {
-    margin:100px auto 0px auto;
+.rotate {  
+
+ position: absolute;
+ 
+  top: 50%;
+  left: 50%;
+ 
+  margin-top: -250px;   
+  margin-left: -130px;
     -webkit-transform: scale(-5,-5);
     transform: scale(-5,-5);
 }

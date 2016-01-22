@@ -4,7 +4,7 @@
     <nav>
         <ul>    
             <li>
-                <a href="../"> Home </a> 
+                <a href="/Alumno"> Home </a> 
             </li>
             <li>
                 <a href="?opcion=1"> Curso Ofimatica </a> 
@@ -19,7 +19,7 @@
                 <a href="?opcion=4"> Recidencias Procefionales </a> 
             </li>
             <li>
-                <a href="?opcion=5"> Empresa </a> 
+                <a href="?opcion=5"> Egresado </a> 
             </li>
             <li>
                 <a href="?opcion=6"> Configuración </a> 

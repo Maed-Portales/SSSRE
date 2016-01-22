@@ -4,7 +4,7 @@
     <nav>
         <ul>    
             <li>
-                <a href="../"> Home </a> 
+                <a href="/Admin"> Home </a> 
             </li>
             <li>
                 <a href="?opcion=1"> Subir Exel </a> 

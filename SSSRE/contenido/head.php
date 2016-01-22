@@ -1,14 +1,13 @@
 <?php
 
-
 $ERROR=error_reporting(E_ALL ^ E_NOTICE); 
 date_default_timezone_set('America/Monterrey');
 @$año = date("Y"); 
-session_start();
  
-include("conector.php");    
-include "opciones.php";   
-include "msj_data.php"; 
+ 
+include ("conector.php");    
+include ("opciones.php");   
+include ("msj_data.php"); 
 
 
         $fichero = "css/estilos.css";
@@ -25,8 +24,7 @@ include "msj_data.php";
 	<script src='../js/jquery-1.2.6.min.js'></script>
     ";
         }
-?>
-
+?> 
 
 <!DOCTYPE html><!-- HTML5 -->
 <html lang="es-ES" dir="ltr">

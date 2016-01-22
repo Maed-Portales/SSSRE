@@ -4,6 +4,12 @@ if (isset($_GET["opcion"] ))
  @$archivo = $_GET["opcion"]; 
 switch (@$archivo) {
 
+    case '5':
+		@$titulo = "Datos Personales";
+        @$contenido = "contenido/datos_personales.php";
+		break; 
+
+
     case '6':
 		@$titulo = "Datos Personales";
         @$contenido = "contenido/datos_personales.php";

@@ -41,6 +41,7 @@ article select, option{
 
 .txt_p{ text-align: left; }
 
+.required{color:red;}
 
 footer{
     background: #950006;  
@@ -59,4 +60,4 @@ text-align: center;
     text-shadow:5px 5px 10px #000;;
 } 
 
-
+ 

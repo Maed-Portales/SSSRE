@@ -1,21 +1,23 @@
-<?php include ('contenido/head.php'); 
- 
-  $tipo = $_SESSION['tipo'];
- 
- if (isset($tipo)==true) {
-    if ($tipo==1){header ("Location:Alumno");} 
-	else if ($tipo==0){header ("Location:Admin"); }
-}?>
+<?php 
+session_start();   
+
+ if(isset($_SESSION['Tipo'])){
+
+    if ($_SESSION['Tipo']==0){header ("Location:Admin");} 
+	else if ($_SESSION['Tipo']==1){header ("Location:Alumno"); } } 
+	include ('contenido/head.php');  
+?>
 <body><?php echo $msjs_data; ?>
-    <div class='conteniner'>
         <?php  include ('contenido/header.php'); ?>
-            <aside id='Caja_Contenido_cen'>
-                <?php
+    <div class='conteniner'>
+		<div class="txt_hdr">
+		Seguimiento de Servicio Social, Residencias y Egresados
+		</div>
+	<aside id='Caja_Contenido_cen'>
+                <?php 
                 include(@$contenido); ?> 
             </aside> <!-- FIN contenido_tematico   -->
         <?php include('contenido/footer.html') ?>
     </div> <!-- Fin de conteniner --> 
     </body> 
-</html>
-
- 
+</html> 

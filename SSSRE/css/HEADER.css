@@ -1,14 +1,26 @@
-header { 
+header, .txt_hdr { 
 	color: #FFF;
-	margin: 0px  auto;
+	margin: 0px auto;
 	width: 100%;
-	background: #950006;
+	background: #fff;
 	border-radius: 15px 15px 0px 0px; 
+	z-index:10;
 }
 
 header img { 
 	max-width:100%; 
-	width: 100%;
+	width: 40%;
+    height: auto;
 	 }
-
  
+ .txt_hdr {
+  font-family: "Corbel";
+
+	background: #950006;
+margin-top:50px;
+padding-top:17px;
+padding-bottom:15px; 
+font-size:24pt;
+font-weight:bold;
+text-shadow: 8px 5px 8px #000;
+ }

@@ -46,7 +46,7 @@
 			<a href="?opcion=2"> 
 				<div class="cuadro">
 					<img id="img_up_doc" src="../res/up_doc.png"> <br>
-					<label>Datos de empresa</label>
+					<label>Egresado</label>
 				</div>
 			</a>
 		</td>

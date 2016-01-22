@@ -1,7 +1,7 @@
 .List_alumnado{
 margin-top: 35px;  
 background: #fff;
-height: 400px;
+height: 550px;
 } 
 
 
@@ -14,7 +14,7 @@ table.lst_alumnos tr:nth-child(odd){
 }
  
 .contenedor_alumnos{
-  padding-top: 10px;
+  padding-top: 10px; 
     
 }
 .txt_noms{

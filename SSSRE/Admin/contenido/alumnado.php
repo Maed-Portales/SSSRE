@@ -1,15 +1,13 @@
-<?php $lis_alum=[
-    "Jesus Maed Portales Rodriguez", 
-    "Adilene Rios Fajardo", 
-    "Pedro Antonio Cabrera Sotres",
-    "Ivan Sair Casto Lopez"]; 
+<?php 
+$lis_alum  = "SELECT CONCAT(Ap1,' ',Ap2,' ',N1,' ',N2)  AS NomC,Matricula FROM persona";
+$run_matricula=$conexion->query($lis_alum) ;
 ?>
 
 
 <div class="List_alumnado">
 
     <form name="bsq_alumno" action="" method="post">
-
+<!--
     <label>Periodo Escoloar:</label>
     <select>
         <option /> - 
@@ -23,15 +21,14 @@
         <option /> - <?php for ($año=2008; $año<=2115 ; $año++) { ?>
         <option /> <?php echo $año; } ?>	
     </select>
-
+-->
     <label>Matricula:</label>
      <input type="text" name="matricula" maxlength="9">
 
      <input type="submit" name="buscar_alumno" value="Buscar">
     </form>
 
-    <hr>
-
+    <hr> 
     <div class="contenedor_alumnos">
 
     <table name="tb_lst_alum" class="lst_alumnos" border="0px"> 
@@ -44,12 +41,21 @@
             <th width="10%">Servicio Social</th>
             <th width="10%">Residencias Profesionales</th>
             <th width="10%">Siguiente del egresado</th>
-        </tr> 
-    <?php foreach ($lis_alum as $key => $value) { ?>
+        <tr> 
+    <?php while($row = $run_matricula ->fetch_assoc())  { 
+ 	
+	// var_dump($row['NomC']);
+	 
+if($row['NomC']=="   " ){  
+	 $Alumno = $row['Matricula']; }else{ 
+	 $Alumno = $row['NomC']; }
+ 
+	
+	?>
         <tr>
 
             <td class="txt_noms"> 
-                 <?php echo( $value); ?>
+                 <?php echo $Alumno; ?>
             </td>
             <td> 
                 <button id="edit" name="edit" title="Editar datos del alumno"t>
